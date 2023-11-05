@@ -8,7 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.project.controller.customer"
+            fx:controller="lk.ijse.project.controller.AddBookingClass"
             prefHeight="400.0" prefWidth="600.0">
 
 </AnchorPane>
