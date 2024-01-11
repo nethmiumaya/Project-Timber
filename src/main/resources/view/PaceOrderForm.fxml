@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.PlaceOrderController">
+   <children>
+      <ImageView fx:id="placeorderform" fitHeight="550.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/images/placeorder.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="245.0" layoutY="10.0" prefHeight="42.0" prefWidth="330.0" text="Place Order Form" textFill="#949c7f">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="72.0" text="Order Id:" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="526.0" layoutY="72.0" text="Date" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="132.0" text="Customer Id" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCustomerId" focusColor="#f5ffb2" layoutX="149.0" layoutY="115.0" onAction="#cmbcusOrderIdOnAction" prefHeight="33.0" prefWidth="203.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" />
+      <Label layoutX="24.0" layoutY="186.0" text="Product Id" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbproductId" focusColor="#ecf753" layoutX="24.0" layoutY="214.0" onAction="#cmbProductOnAction" prefHeight="33.0" prefWidth="183.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" />
+      <Label layoutX="273.0" layoutY="190.0" text="Description:" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="436.0" layoutY="189.0" text="Unit Price:" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="553.0" layoutY="189.0" text="Qty. On Hand:" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="707.0" layoutY="189.0" text="Qty:" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQty" layoutX="693.0" layoutY="211.0" onAction="#txtQtyOnAction" prefHeight="33.0" prefWidth="66.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" />
+      <TableView fx:id="tblOrderCart" layoutX="24.0" layoutY="307.0" prefHeight="200.0" prefWidth="747.0" style="-fx-background-color: rgba(241, 201, 170, 1);">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="104.5" style="-fx-background-color: rgba(236, 204, 187, 0.8);" text="Product Id" />
+            <TableColumn fx:id="colDescription" prefWidth="161.5" style="-fx-background-color: rgba(236, 204, 187, 0.8);" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="81.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="172.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="112.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" text="Total" />
+            <TableColumn fx:id="colAction" prefWidth="115.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" text="Action" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnAddToCart" buttonType="RAISED" layoutX="651.0" layoutY="257.0" onAction="#btnAddToCartOnAction" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: rgba(114, 63, 57, 1);" text="Add to cart" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../thogakade-mvc/src/main/resources/icon/cart.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="634.0" layoutY="518.0" onAction="#btnPlaceOrderOnAction" prefHeight="34.0" prefWidth="137.0" style="-fx-background-color: rgba(172, 127, 66, 1);" text="Place Order" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../thogakade-mvc/src/main/resources/icon/make_order.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="557.0" layoutY="520.0" onAction="#btnBackOnAction" prefHeight="33.0" prefWidth="66.0" style="-fx-background-color: rgba(133, 64, 22, 1);" text="Back" textFill="#f8f4f4">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblDate" layoutX="626.0" layoutY="72.0" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="147.0" layoutY="65.0" prefHeight="33.0" prefWidth="126.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="526.0" text="Net Total:" textFill="#faf8f8">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblnettotal" layoutX="121.0" layoutY="525.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" textFill="#faf8f8">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" layoutX="273.0" layoutY="216.0" prefHeight="33.0" prefWidth="97.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" />
+      <Label fx:id="lblUnitPrice" layoutX="432.0" layoutY="214.0" prefHeight="33.0" prefWidth="97.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" />
+      <Label fx:id="lblQtyOnHand" layoutX="557.0" layoutY="214.0" prefHeight="33.0" prefWidth="97.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" />
+      <Label fx:id="lblNetTotal" layoutX="116.0" layoutY="527.0" prefHeight="16.0" prefWidth="76.0" style="-fx-background-color: rgba(236, 204, 187, 0.8);" />
+   </children>
+</AnchorPane>

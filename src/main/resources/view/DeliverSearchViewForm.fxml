@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.DeliverSearchControllerFrom">
+   <children>
+      <ImageView fitHeight="407.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/images/search.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblteleno" layoutX="243.0" layoutY="213.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <Label fx:id="lbldate" layoutX="243.0" layoutY="260.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <Label fx:id="lblpayment" layoutX="243.0" layoutY="308.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <TextField fx:id="txtcus_order_id" layoutX="57.0" layoutY="210.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="Tele No" />
+      <TextField fx:id="txtunitprice" layoutX="57.0" layoutY="305.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="Payment" />
+      <TextField fx:id="txtunitprice1" layoutX="57.0" layoutY="257.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="Date" />
+      <Label fx:id="lbladdress" layoutX="243.0" layoutY="163.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <TextField fx:id="txtcus_order_id1" layoutX="57.0" layoutY="160.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="Address" />
+      <Label fx:id="lbldid" layoutX="243.0" layoutY="120.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <TextField fx:id="txtcus_order_id11" layoutX="57.0" layoutY="117.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="Deliver Id" />
+      <Button fx:id="btnback" layoutX="498.0" layoutY="48.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="89.0" style="-fx-background-radius: 10; -fx-background-color: rgba(114, 63, 57, 1);" text="BACK" textFill="#f3e7e7">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="56.0" layoutY="36.0" text="Deliver Detail View" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

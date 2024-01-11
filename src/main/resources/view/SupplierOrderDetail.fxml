@@ -1,14 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.project.controller.SupplierOrderDetailClass"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="719.0" prefWidth="1273.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.SupplierOrderDetailController">
+   <children>
+      <ImageView fitHeight="728.0" fitWidth="1084.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/images/wood-light-grain-background-hd-images-free-izhy6ls0sm.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btncustomerorders" layoutX="55.0" layoutY="83.0" mnemonicParsing="false" onAction="#btnCustomerOrdersOnAction" prefHeight="20.0" prefWidth="171.0" style="-fx-background-radius: 20; -fx-background-color: rgba(243, 220, 164, 1);" text="Customer Orders" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSupplierOrders" layoutX="235.0" layoutY="83.0" mnemonicParsing="false" onAction="#btnSupplierOrdersOnAction" prefHeight="20.0" prefWidth="171.0" style="-fx-background-radius: 20; -fx-background-color: rgba(136, 93, 64, 1);" text="Supplier Orders" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="55.0" layoutY="28.0" text="Orders Detail" textFill="#cb7c23">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblsupplierorder" layoutX="31.0" layoutY="411.0" prefHeight="277.0" prefWidth="954.0">
+        <columns>
+          <TableColumn fx:id="colorderid" prefWidth="95.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Order Id" />
+            <TableColumn fx:id="coltotalprice" prefWidth="169.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Total Price" />
+            <TableColumn fx:id="colunitprice" prefWidth="210.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Unit Price" />
+            <TableColumn fx:id="colqty" prefWidth="228.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Quantity" />
+            <TableColumn fx:id="coldate" prefWidth="247.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Date" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtoid" layoutX="193.0" layoutY="196.0" prefHeight="33.0" prefWidth="230.0" />
+      <TextField fx:id="txtunitprice" layoutX="193.0" layoutY="279.0" prefHeight="33.0" prefWidth="230.0" />
+      <JFXButton fx:id="btnsave" buttonType="RAISED" contentDisplay="RIGHT" layoutX="763.0" layoutY="349.0" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: rgba(114, 63, 57, 1);" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../thogakade-mvc/src/main/resources/icon/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnupdate" buttonType="RAISED" contentDisplay="RIGHT" layoutX="619.0" layoutY="349.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: rgba(123, 88, 30, 1);" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../thogakade-mvc/src/main/resources/icon/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btndelete" buttonType="RAISED" contentDisplay="RIGHT" layoutX="475.0" layoutY="349.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: rgba(114, 63, 57, 1);" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../thogakade-mvc/src/main/resources/icon/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TextField fx:id="txtqty" layoutX="496.0" layoutY="279.0" prefHeight="33.0" prefWidth="230.0" />
+      <Label layoutX="193.0" layoutY="178.0" text="Order Id" textFill="#363232">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="193.0" layoutY="263.0" text="Unit Price" textFill="#363232">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="263.0" text="Quantity" textFill="#363232">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txttotalprice" layoutX="496.0" layoutY="195.0" prefHeight="33.0" prefWidth="230.0" />
+      <Label layoutX="496.0" layoutY="177.0" text="Total Price" textFill="#363232">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtdate" layoutX="799.0" layoutY="287.0" prefHeight="33.0" prefWidth="230.0" />
+      <Label layoutX="799.0" layoutY="271.0" text="Date" textFill="#363232">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnclear" buttonType="RAISED" contentDisplay="RIGHT" layoutX="904.0" layoutY="349.0" onAction="#btnclearOnAction" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: rgba(123, 88, 30, 1);" text="CLEAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lbldate" layoutX="1263.0" layoutY="14.0" prefHeight="27.0" prefWidth="150.0" />
+      <Label fx:id="lbltime" layoutX="1263.0" layoutY="41.0" prefHeight="27.0" prefWidth="150.0" />
+   </children>
 </AnchorPane>

@@ -8,24 +8,23 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="531.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.loginPageClass">
+<AnchorPane fx:id="root" prefHeight="531.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.loginPageController">
    <children>
       <ImageView fitHeight="531.0" fitWidth="907.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="531.0" fitWidth="907.0">
+      <ImageView fx:id="LogIn" fitHeight="531.0" fitWidth="907.0">
          <image>
-            <Image url="@../images/login Page.png" />
+            <Image url="@../assests/images/login Page.png" />
          </image>
       </ImageView>
-      <TextField alignment="TOP_LEFT" layoutX="621.0" layoutY="234.0" prefHeight="25.0" prefWidth="194.0" text="Enter Username" />
-      <TextField alignment="TOP_LEFT" layoutX="621.0" layoutY="294.0" prefHeight="25.0" prefWidth="194.0" text="Enter Password" />
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="649.0" layoutY="358.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: A86431;" text="LOG IN">
+      <TextField fx:id="txtUsername" alignment="TOP_LEFT" layoutX="621.0" layoutY="234.0" prefHeight="25.0" prefWidth="194.0" promptText="Enter Username" style="-fx-border-color: 727374;" />
+      <TextField fx:id="txtPassword" alignment="TOP_LEFT" layoutX="621.0" layoutY="294.0" prefHeight="25.0" prefWidth="194.0" promptText="Enter Password" style="-fx-border-color: 727374;" />
+      <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="649.0" layoutY="358.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: A86431;" text="LOG IN">
          <effect>
             <ColorAdjust />
          </effect>
       </Button>
-      <Label alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="660.0" layoutY="325.0" prefHeight="16.0" prefWidth="155.0" text="Forgot Password ?" />
+      <Label fx:id="txtForgorPassword" alignment="TOP_CENTER" contentDisplay="BOTTOM" layoutX="660.0" layoutY="325.0" onMouseClicked="#txtForgotPassword" prefHeight="16.0" prefWidth="155.0" text="Forgot Password ?" />
       <Label layoutX="489.0" layoutY="501.0" text="Don't have an Account ?" />
-      <Label layoutX="649.0" layoutY="501.0" text="Sign Up" textFill="#d85454" />
+      <Label fx:id="txtSignUp" layoutX="649.0" layoutY="501.0" onMouseClicked="#txtSignUp" text="Sign Up" textFill="#d85454" />
    </children>
 </AnchorPane>

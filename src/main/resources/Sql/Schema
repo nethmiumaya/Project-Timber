@@ -1,0 +1,197 @@
+create database if not exists Timber;
+
+use Timber;
+
+create table customer(
+	cid varchar(20) primary key not null,
+     first_name varchar(50)not null,
+	last_name varchar(50) not null,
+     nic varchar(15) not null,
+	address varchar(150) not null,
+	tele_no varchar(10)not null,
+	email varchar(30) not null
+
+);
+
+create table user(
+     username varchar(30) not null,
+     password varchar(40) not null
+);
+
+insert into user values('Admin','wood@123');
+
+create table employee(
+     emp_id varchar(20) primary key not null,
+     first_name varchar(100) not null,
+     last_name varchar(100),
+     address varchar(150) not null,
+     tele_no int not null,
+     join_date date not null,
+     nic varchar(20) not null
+);
+
+
+create table salary(
+     emp_id varchar(20) not null,
+     date date not null,
+     time time not null,
+     worked_dayes int not null,
+     bonus double not null,
+     payment double not null,
+     CONSTRAINT FOREIGN KEY(emp_id) REFERENCES employee(emp_id) on Delete Cascade on Update Cascade
+);
+
+create table attendance(
+     name varchar(150)not null,
+     date date not null,
+     jobrole varchar(50) not null
+);
+
+create table supplier(
+     s_id varchar(20) primary key not null,
+     s_name varchar(150)not null,
+     tele_no int not null,
+     email varchar(50) not null,
+     date date not null,
+     time time not null
+);
+
+create table supplier_order(
+     o_id varchar(20) primary key not null,
+     total_price double,
+     unit_price double,
+     qty int,
+     date date
+);
+
+create table item(
+	i_code varchar(20) primary key not null,
+	i_name varchar(100) not null,
+	qtyOfHand int not null,
+	unit_price double not null
+	);
+
+create table item_detail(
+     i_code varchar(20),
+     o_id varchar(20),
+     CONSTRAINT FOREIGN KEY(o_id) REFERENCES supplier_order(o_id) on Delete Cascade on Update Cascade,
+     CONSTRAINT FOREIGN KEY(i_code) REFERENCES item(i_code) on Delete Cascade on Update Cascade
+);
+
+create table booking_detail(
+     booking_id varchar(20) primary key not null,
+     nic varchar(13) not null,
+     i_code varchar(20) not null,
+     initial_cost double not null,
+     qty int not null,
+     date varchar(10) not null,
+
+     CONSTRAINT FOREIGN KEY(i_code) REFERENCES item(i_code) on Delete Cascade on Update Cascade
+    );
+
+select count(cid) from customer where date = "2023-02-10";
+
+create table product(
+     product_id varchar(20) not null,
+     category text not null,
+     unit_price double not null,
+     rest_price double not null,
+     description text not null,
+     qty_on_hand int not null
+);
+
+create table customer_order(
+     cus_order_id varchar(20) primary key,
+     cid varchar(20)not null,
+     total_price double not null,
+     unit_price double not null,
+     qty int not null,
+     date date not null,
+     time time not null,
+     CONSTRAINT FOREIGN KEY(cid) REFERENCES customer(cid) on Delete Cascade on Update Cascade
+);
+
+create table deliver(
+     deliver_id varchar(20) primary key ,
+     address varchar(20)not null,
+     tele_no int(10) not null,
+     dueDate Date not null,
+     payment double not null
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

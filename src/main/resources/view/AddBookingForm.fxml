@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="741.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.AddBookingController">
+   <children>
+      <ImageView fx:id="booking_page" fitHeight="741.0" fitWidth="910.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/images/AddBooking.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtnic" layoutX="572.0" layoutY="249.0" prefHeight="30.0" prefWidth="232.0" promptText="NIC" style="-fx-background-color: rgba(255, 255, 255, 1); -fx-background-radius: 10;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtinitialcost" layoutX="572.0" layoutY="317.0" prefHeight="30.0" prefWidth="232.0" promptText="Initial Cost" style="-fx-background-color: rgba(255, 255, 255, 1); -fx-background-radius: 10;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txtqty" layoutX="109.0" layoutY="395.0" prefHeight="30.0" prefWidth="232.0" promptText="Quantity" style="-fx-background-color: rgba(255, 255, 255, 1); -fx-background-radius: 10;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="txticode" layoutX="109.0" layoutY="317.0" prefHeight="30.0" prefWidth="232.0" promptText="Item Code" style="-fx-background-color: rgba(255, 255, 255, 1); -fx-background-radius: 10;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <DatePicker fx:id="TextMate" layoutX="572.0" layoutY="395.0" prefHeight="30.0" prefWidth="232.0" promptText="Date" style="-fx-background-color: rgba(255, 255, 255, 1); -fx-background-radius: 10;" />
+      <JFXButton fx:id="btnsave" buttonType="RAISED" contentDisplay="RIGHT" layoutX="624.0" layoutY="574.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: rgba(123, 88, 30, 1); -fx-background-radius: 10;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../thogakade-mvc/src/main/resources/icon/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnupdate1" buttonType="RAISED" contentDisplay="RIGHT" layoutX="109.0" layoutY="637.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: rgba(123, 88, 30, 1); -fx-background-radius: 10;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../thogakade-mvc/src/main/resources/icon/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btndelete1" buttonType="RAISED" contentDisplay="RIGHT" layoutX="109.0" layoutY="581.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: rgba(114, 63, 57, 1); -fx-background-radius: 10;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../thogakade-mvc/src/main/resources/icon/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnback" buttonType="RAISED" contentDisplay="RIGHT" layoutX="624.0" layoutY="630.0" onAction="#btnbackOnAction" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: rgba(114, 63, 57, 1); -fx-background-radius: 10;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblbid" layoutX="109.0" layoutY="249.0" prefHeight="30.0" prefWidth="232.0" style="-fx-background-color: rgba(255, 255, 255, 1); -fx-background-radius: 10;" />
+   </children>
+</AnchorPane>

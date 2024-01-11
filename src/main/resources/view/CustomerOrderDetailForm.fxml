@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="718.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.CustomerOrderDetailController">
+   <children>
+      <ImageView fitHeight="728.0" fitWidth="1084.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/images/wood-light-grain-background-hd-images-free-izhy6ls0sm.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btncustomerorders" layoutX="28.0" layoutY="69.0" mnemonicParsing="false" onAction="#btnCustomerOrdersOnAction" prefHeight="20.0" prefWidth="171.0" style="-fx-background-radius: 20; -fx-background-color: rgba(136, 93, 64, 1);" text="Customer Orders" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSupplierOrders" layoutX="208.0" layoutY="69.0" mnemonicParsing="false" onAction="#btnSupplierOrdersOnAction" prefHeight="20.0" prefWidth="171.0" style="-fx-background-radius: 20; -fx-background-color: rgba(243, 220, 164, 1);" text="Supplier Orders" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="28.0" layoutY="14.0" text="Orders Detail" textFill="#cb7c23">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btncustomerorder" layoutX="866.0" layoutY="67.0" mnemonicParsing="false" onAction="#btnaddcustomerorderOnAction" prefHeight="27.0" prefWidth="171.0" style="-fx-background-radius: 20; -fx-background-color: rgba(243, 220, 164, 1);" text="Add Customer Order" textFill="#fffefe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtrestprice" layoutX="56.0" layoutY="213.0" prefHeight="33.0" prefWidth="230.0" />
+      <JFXButton fx:id="btnsave" buttonType="RAISED" contentDisplay="RIGHT" layoutX="548.0" layoutY="284.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: rgba(114, 63, 57, 1);" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../thogakade-mvc/src/main/resources/icon/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnupdate" buttonType="RAISED" contentDisplay="RIGHT" layoutX="363.0" layoutY="284.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: rgba(123, 88, 30, 1);" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../thogakade-mvc/src/main/resources/icon/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btndelete" buttonType="RAISED" contentDisplay="RIGHT" layoutX="180.0" layoutY="284.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: rgba(114, 63, 57, 1);" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../thogakade-mvc/src/main/resources/icon/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TextField fx:id="txtcategory" layoutX="359.0" layoutY="130.0" prefHeight="33.0" prefWidth="230.0" />
+      <TextField fx:id="txtdesc" layoutX="359.0" layoutY="213.0" prefHeight="33.0" prefWidth="230.0" />
+      <Label layoutX="56.0" layoutY="112.0" text="Product Id" textFill="#363232">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="359.0" layoutY="112.0" text="Category" textFill="#363232">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="197.0" text="Rest Price" textFill="#363232">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="359.0" layoutY="197.0" text="Description" textFill="#363232">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtunitprice" layoutX="669.0" layoutY="130.0" prefHeight="33.0" prefWidth="230.0" />
+      <Label layoutX="669.0" layoutY="112.0" text="Unit Price" textFill="#363232">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtqty" layoutX="669.0" layoutY="221.0" prefHeight="33.0" prefWidth="230.0" />
+      <Label layoutX="669.0" layoutY="205.0" text="QtyOfHand" textFill="#363232">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnback" buttonType="RAISED" contentDisplay="RIGHT" layoutX="727.0" layoutY="284.0" onAction="#btnbackOnAction" prefHeight="31.0" prefWidth="171.0" style="-fx-background-color: rgba(123, 88, 30, 1);" text="CLEAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblproduct" layoutX="14.0" layoutY="336.0" prefHeight="229.0" prefWidth="980.0" style="setFill(): rgba(243, 220, 164, 1);">
+        <columns>
+          <TableColumn fx:id="colpid" prefWidth="119.0" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Product Id" />
+          <TableColumn fx:id="colcategory" prefWidth="157.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Category" />
+            <TableColumn fx:id="colunitprice" prefWidth="204.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Unit Price" />
+            <TableColumn fx:id="colrestprice" prefWidth="204.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Rest Price" />
+            <TableColumn fx:id="coldescription" prefWidth="176.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Description" />
+            <TableColumn fx:id="colqty" prefWidth="117.0" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Quantity" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnplaceorder" layoutX="823.0" layoutY="615.0" mnemonicParsing="false" onAction="#btnPlaceorderOnAction" prefHeight="30.0" prefWidth="171.0" style="-fx-background-radius: 20; -fx-background-color: rgba(172, 127, 66, 1);" text="Place Order">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="396.0" layoutY="70.0" mnemonicParsing="false" onAction="#btnemployeejasperOnAction" prefHeight="23.0" prefWidth="143.0" style="-fx-background-color: rgba(255, 255, 255, 0);" text="employee jasper" textFill="#2d2b2b">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblpid" layoutX="56.0" layoutY="130.0" prefHeight="33.0" prefWidth="230.0" style="-fx-background-color: rgba(255, 255, 255, 1);" />
+   </children>
+</AnchorPane>

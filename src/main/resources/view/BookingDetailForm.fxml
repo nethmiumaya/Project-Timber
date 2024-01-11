@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1070.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.BookingDetailController">
+   <children>
+      <ImageView fitHeight="728.0" fitWidth="1084.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/images/wood-light-grain-background-hd-images-free-izhy6ls0sm.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnlogout" layoutX="23.0" layoutY="659.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="20.0" prefWidth="150.0" style="-fx-background-radius: 20; -fx-background-color: rgba(222, 184, 97, 1);" text="LOG OUT">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="23.0" layoutY="38.0" text="Booking Detail" textFill="#e1d531">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnaddbooking" layoutX="854.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnaddBookingOnAction" prefHeight="27.0" prefWidth="171.0" style="-fx-background-radius: 20; -fx-background-color: rgba(243, 220, 164, 1);" text="Add Booking" textFill="#fffefe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblbooking" layoutX="12.0" layoutY="69.0" prefHeight="567.0" prefWidth="1008.0" style="-fx-background-color: rgba(255, 255, 255, 1); -fx-background-radius: 50;">
+        <columns>
+          <TableColumn fx:id="colbid" prefWidth="127.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Booking Id" />
+          <TableColumn fx:id="colnic" prefWidth="162.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="NIC" />
+            <TableColumn fx:id="colitemcode" prefWidth="123.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Item Code" />
+            <TableColumn fx:id="colicost" prefWidth="258.5" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Initial Cost" />
+            <TableColumn fx:id="colqty" prefWidth="155.0" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Quantity" />
+            <TableColumn fx:id="coldate" prefWidth="185.0" style="-fx-background-color: rgba(243, 220, 164, 1);" text="Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

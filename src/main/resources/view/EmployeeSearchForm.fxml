@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="395.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.controller.EmployeeSearchController">
+   <children>
+      <ImageView fx:id="empviewPage" fitHeight="415.0" fitWidth="600.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/images/search.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="46.0" layoutY="26.0" text="Employee Detail View" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbllname" layoutX="232.0" layoutY="169.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <Label fx:id="lbladdress" layoutX="232.0" layoutY="216.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <Label fx:id="lblteleno" layoutX="232.0" layoutY="264.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <Label fx:id="lbldate" layoutX="232.0" layoutY="314.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <Label fx:id="lblnic" layoutX="232.0" layoutY="358.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <TextField fx:id="txtcus_order_id" layoutX="46.0" layoutY="166.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="Last Name" />
+      <TextField fx:id="txtunitprice" layoutX="46.0" layoutY="261.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="Tele No" />
+      <TextField fx:id="txtqty" layoutX="46.0" layoutY="311.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="Join Date" />
+      <TextField fx:id="txttotalprice" layoutX="46.0" layoutY="355.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="NIC" />
+      <TextField fx:id="txtunitprice1" layoutX="46.0" layoutY="213.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="Address" />
+      <Label fx:id="lblfname" layoutX="232.0" layoutY="119.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <TextField fx:id="txtcus_order_id1" layoutX="46.0" layoutY="116.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="First Name" />
+      <Label fx:id="lblempid" layoutX="232.0" layoutY="76.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(236, 204, 187, 0.8); -fx-background-radius: 10;" />
+      <TextField fx:id="txtcus_order_id11" layoutX="46.0" layoutY="73.0" prefHeight="30.0" prefWidth="144.0" style="-fx-background-radius: 10; -fx-background-color: rgba(254, 226, 182, 1);" text="Employee Id" />
+      <Button fx:id="btnback" layoutX="488.0" layoutY="38.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="89.0" style="-fx-background-radius: 10; -fx-background-color: rgba(114, 63, 57, 1);" text="BACK" textFill="#f3e7e7">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
